@@ -14,7 +14,7 @@ a = LUsistLin(-R,r); %encontra meus valores do filtro / otimizado com LU
 
 %%%%calculo erro%%%%%%
 
-ccnorm = cc./cc(1)
+ccnorm = cc./cc(1);
 error = cc(1);
 for i = 2:length(cc);
     error = error + a(i-1,1)*cc(i);  
