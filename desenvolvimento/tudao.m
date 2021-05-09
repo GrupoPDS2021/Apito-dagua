@@ -77,29 +77,29 @@ end
 
 end
 
-while j < length(x)
-    
-    finalimp(k:k + t1) = zfimp(:,i);
-    inicial(k:k + t1) = z(:,i);
-    finalruido(k:k+t1) = zfrui(:,i);
-    finalimppre(k:k + t1) = zfpreimp(:,i);
-    finalruidopre(k:k + t1) = zfprerui(:,i);
-k = 1;
-for i = 1:size(z,2)
-    finalimp(k:k + t1) = zfimp(:,i);
-    inicial(k:k + t1) = z(:,i);
-    finalruido(k:k+t1) = zfrui(:,i);
-    finalimppre(k:k + t1) = zfpreimp(:,i);
-    finalruidopre(k:k + t1) = zfprerui(:,i);
-    k = k + t1;
-end
-
-end
-    
-erroimp=mean((inicial'-finalimp').^2);
-errorui=mean((inicial'-finalruido').^2);
-erropreimp=mean((inicial'-finalimppre').^2);
-erroprerui=mean((inicial'-finalruidopre').^2);
+% while j < length(x)
+%     
+%     finalimp(k:k + t1) = zfimp(:,i);
+%     inicial(k:k + t1) = z(:,i);
+%     finalruido(k:k+t1) = zfrui(:,i);
+%     finalimppre(k:k + t1) = zfpreimp(:,i);
+%     finalruidopre(k:k + t1) = zfprerui(:,i);
+%     k = 1;
+% for i = 1:size(z,2)
+%     finalimp(k:k + t1) = zfimp(:,i);
+%     inicial(k:k + t1) = z(:,i);
+%     finalruido(k:k+t1) = zfrui(:,i);
+%     finalimppre(k:k + t1) = zfpreimp(:,i);
+%     finalruidopre(k:k + t1) = zfprerui(:,i);
+%     k = k + t1;
+% end
+% 
+% end
+%     
+% erroimp=mean((inicial'-finalimp').^2);
+% errorui=mean((inicial'-finalruido').^2);
+% erropreimp=mean((inicial'-finalimppre').^2);
+% erroprerui=mean((inicial'-finalruidopre').^2);
     
 % [YFISK,w]=freqz(final,1,40000,'whole');
 % [YFISK1,w]=freqz(inicial,1,40000,'whole');
@@ -122,14 +122,14 @@ erroprerui=mean((inicial'-finalruidopre').^2);
 % 
 % 
 % 
-sound(50*inicial,44100)
-
-sound(50*finalimp,44100)
-sound(50*finalruido,44100)
-sound(50*finalruidopre,44100)
-sound(50*finalimppre,44100)
-audiowrite('inicial.wav',50*inicial,Fs)
-audiowrite('impulso.wav',50*finalimp,Fs)
-audiowrite('ruido.wav',50*finalruido,Fs)
-audiowrite('pre_ruidobranco.wav',50*finalruidopre,Fs)
-audiowrite('pre_impulso.wav',50*finalimppre,Fs)
+% sound(50*inicial,44100)
+% 
+% sound(50*finalimp,44100)
+% sound(50*finalruido,44100)
+% sound(50*finalruidopre,44100)
+% sound(50*finalimppre,44100)
+% audiowrite('inicial.wav',50*inicial,Fs)
+% audiowrite('impulso.wav',50*finalimp,Fs)
+% audiowrite('ruido.wav',50*finalruido,Fs)
+% audiowrite('pre_ruidobranco.wav',50*finalruidopre,Fs)
+% audiowrite('pre_impulso.wav',50*finalimppre,Fs)
